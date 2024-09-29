@@ -10,7 +10,6 @@ class Node{
             this->next = NULL;
         }
 };
-
 void print(Node* head){
     Node* temp = head;
     
@@ -24,6 +23,9 @@ void print(Node* head){
 
 void deleteMiddleNode(Node* &head){
     
+    // 1 -> 2 -> 3 -> 4 -> 5
+    // s f , here fast will end up at null, slow remain same
+
     if(head == NULL || head->next == NULL) return; 
     
     Node* slow = head;
@@ -36,6 +38,12 @@ void deleteMiddleNode(Node* &head){
         fast = fast->next->next;
     }
 
+    // do it in copy you will understand
+    // main factor is here if the fast will end on null or not
+    if(fast != NULL) {
+        prev = slow;
+        slow = slow->next;
+    }
     prev->next = slow->next;
     slow->next = NULL;
     delete(slow);
@@ -48,6 +56,8 @@ int main(){
     head->next->next = new Node(3);
     head->next->next->next = new Node(4);
     head->next->next->next->next = new Node(5);
+    head->next->next->next->next->next = new Node(6);
+
     print(head);
     deleteMiddleNode(head); 
     print(head);
