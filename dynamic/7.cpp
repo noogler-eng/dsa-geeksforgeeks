@@ -18,7 +18,7 @@ int miniEnergyJumps(vector<int> energyStairs){
     miniEnergy[0] = 0;
     miniEnergy[1] = abs(energyStairs[1] - energyStairs[0]);
 
-    for(int i=2; i< miniEnergy.size() + 1; i++){
+    for(int i=2; i< miniEnergy.size(); i++){
         int jump1 = abs(energyStairs[i] - energyStairs[i-1]) + miniEnergy[i-1];
         int jump2 = abs(energyStairs[i] - energyStairs[i-2]) + miniEnergy[i-2];
         miniEnergy[i] = min(jump1, jump2);
