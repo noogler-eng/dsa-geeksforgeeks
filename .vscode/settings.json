@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "*.ejs": "html",
-        "limits": "cpp",
-        "algorithm": "cpp",
-        "variant": "cpp"
-    }
-}

@@ -16,7 +16,7 @@ int getSum(vector<int> arr){
         // on selecting, element is taken then sum will increase
         int selectSum = store[i-2] + arr[i-1]; 
         // on not selecting, element is not count
-        int notSelectedSum = store[i-2];
+        int notSelectedSum = store[i-1];
         store[i] = max(selectSum, notSelectedSum);
     }
     
