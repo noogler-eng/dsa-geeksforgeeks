@@ -2,7 +2,7 @@
 // 1. subset sum problem
 // 2. equal sum partition
 // 3. count of subset sum
-// 4. minimum subset sum
+// 4. minimum subset sum diff
 // 5. target sum
 // 6. no of subset sum with given diff
 
