@@ -24,8 +24,8 @@ string LongestCommonSubstring(string x, string y, int len_x, int len_y){
 }
 
 int main(){
-    string x = "abcde";
-    string y = "abfce";
+    string x = "abcfdgde";
+    string y = "abfcfdge";
     
     // common string part 
     // x = a b c d e
