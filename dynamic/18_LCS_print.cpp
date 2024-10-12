@@ -1,3 +1,4 @@
+// prinitng the longest common subsequence
 #include<iostream>
 // #include<bits/stdc++.h>
 using namespace std;
