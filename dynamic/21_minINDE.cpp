@@ -1,4 +1,7 @@
 // minimum no of insertion and deletion to make one string same as another
+// solved using dynamic programming
+// time complexity is o(n*n)
+// space complexity is o(n*n)
 #include<iostream>
 #include<vector>
 using namespace std;

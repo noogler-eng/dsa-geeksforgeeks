@@ -12,6 +12,7 @@ pair<int, string> getStringLCS(string x, string y, int len_x, int len_y){
         for(int j=1; j<len_y+1; j++){
             if(x[i-1] == y[j-1]){
                 table[i][j] = 1 + table[i-1][j-1];
+                // this is wrong it will not work for aother substrings
                 longest += x[i-1];
             }else{
                 table[i][j] = max(table[i-1][j], table[i][j-1]);
