@@ -57,6 +57,7 @@ pair<int, string> shortestCommonSuperSeq(string x, string y){
         }
     }
 
+    // here things are happeining from back so reversing it
     longest = reverseGivenString(longest);
     return {lenghtOfSuperSeq, longest};
 }
