@@ -6,24 +6,24 @@
 using namespace std;
 vector<int> kLargestElement(vector<int> arr, int k){
     priority_queue<int, vector<int>, greater<int>> minHeap;
-    vector<int> ans;
+    vector<int> v;
 
     // time compleity is o(nlogk)
+    // the min will not come from outside of range k thats why it is nearly sorted
     for(int i=0; i<arr.size(); i++){
         minHeap.push(arr[i]);
-        if(minHeap.size() > k){
+        if(minHeap.size() > k+1){
+            v.push_back(minHeap.top());
             minHeap.pop();
         }
     }
 
-    // time compelxity is o(k)
     while(minHeap.size() > 0){
-        ans.push_back(minHeap.top());
+        v.push_back(minHeap.top());
         minHeap.pop();
     }
 
-    return ans;
-    
+    return v;
 }
 int main(){
     vector<int> arr = {6, 5, 3, 2, 8, 10, 9};
